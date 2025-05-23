@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Ubuntu container') {
             agent { 
-                docker { images 'ubuntu:latest' }
+                docker { image 'ubuntu:latest' }
             }
         }
     stage('Hello world') {
             agent {
-                docker { images 'Helloworld:latest' }
+                docker { image 'Helloworld:latest' }
             }
         }
     stage('Python') {
             agent {
-                docker { images 'python:latest' }
+                docker { image 'python:latest' }
             }
         }
     }
